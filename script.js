@@ -1,4 +1,24 @@
-let square = document.createElement('div');
-square.className = 'square';
-gridContainer = document.querySelector(".grid-container")
-gridContainer.appendChild(square);
+
+function createGrid(gridSize) {
+    
+    gridContainer = document.querySelector(".grid-container")
+
+    for (let i =0 ; i < gridSize; i++) {
+        const column = document.createElement('div');
+        column.className = 'square';
+        gridContainer.appendChild(column);
+
+        for (let j = 0; j < gridSize; j++) { 
+            // j = 1; j <= gridSize
+            const row = document.createElement('div');
+            row.className = 'square';
+            gridContainer.appendChild(column);
+        }
+    }
+
+    
+
+
+}
+
+createGrid(16);

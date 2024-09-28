@@ -3,7 +3,13 @@
     border-color: black;
     border-width: 2px;
     border-style: dotted;
-    width: 10vh;
-    height: 10vh;
-    margin: 50px auto;
+    width: auto;
+    height: auto;
+  }
+
+  .grid-container {
+    min-width: 100px;
+    height: 80vh;
+    display: flex;
+    /* flex-direction: column;*/
   }
