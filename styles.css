@@ -1,0 +1,9 @@
+.square {
+    background: none;
+    border-color: black;
+    border-width: 2px;
+    border-style: dotted;
+    width: 10vh;
+    height: 10vh;
+    margin: 50px auto;
+  }
