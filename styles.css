@@ -4,25 +4,28 @@
   box-sizing: border-box;
 }
 
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  }
+
+.grid {
+  display: flex;
+  border: 1px solid blue;
+  }
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .row {
-    background: none;
-    border-color: black;
-    border-width: 2px;
-    border-style: dotted;
-    height: 100px;
-  }
-
-  .grid-container {
-    min-width: 100px;
-    height: 80vh;
-    display: flex;
-    gap: 10px;
-    /* flex-direction: column;*/
-  }
-
-  .grid-container>div {
-    height: auto;
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-  }
+  background: none;
+  border: 1px solid black;
+  aspect-ratio: 1 / 1;
+  width: 35px;
+  display: flex;
+}
+  

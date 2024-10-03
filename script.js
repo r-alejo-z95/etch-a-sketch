@@ -1,10 +1,11 @@
 
 function createGrid(gridSize) {
     
-    gridContainer = document.querySelector(".grid-container")
+    grid = document.querySelector(".grid")
 
     for (let i = 0 ; i < gridSize; i++) {
         let column = document.createElement('div');
+        column.textContent = '';
         column.className = 'column';
 
         for (let j = 1; j <= gridSize; j++) { 
@@ -13,7 +14,7 @@ function createGrid(gridSize) {
             row.textContent = ('');
             column.appendChild(row);
         }
-        gridContainer.appendChild(column);
+        grid.appendChild(column);
     }
 }
 
