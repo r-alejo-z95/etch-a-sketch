@@ -12,10 +12,13 @@ function createGrid(gridSize) {
             let row = document.createElement('div');
             row.className = 'row';
             row.textContent = ('');
+            row.style.flexBasis = `calc(100% / ${gridSize})`;
+            row.style.height = `calc(100% / ${gridSize})`;
             column.appendChild(row);
         }
         grid.appendChild(column);
     }
 }
 
-createGrid(16);
+createGrid(5);
+
