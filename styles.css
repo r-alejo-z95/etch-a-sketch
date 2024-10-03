@@ -4,13 +4,12 @@
   box-sizing: border-box;
 }
 
-.square {
+.row {
     background: none;
     border-color: black;
     border-width: 2px;
     border-style: dotted;
-    width: auto;
-    height: auto;
+    height: 100px;
   }
 
   .grid-container {
@@ -19,4 +18,11 @@
     display: flex;
     gap: 10px;
     /* flex-direction: column;*/
+  }
+
+  .grid-container>div {
+    height: auto;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
   }
