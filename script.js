@@ -9,12 +9,12 @@ gridContainer.style.height = `${gridSide}px`;
 
 function createGrid() {
 
-    for (let i = 0 ; i < gridSide; i++) {
+    for (let i = 0 ; i < gridSize; i++) {
         let square = document.createElement('div');
 
         square.className = 'square';
-        square.style.width = `${(gridSide / cols) - 2}px`;
-        square.style.height = `${(gridSide / rows) - 2}px`;
+        square.style.width = `${(gridSide / cols)}px`;
+        square.style.height = `${(gridSide / rows)}px`;
         gridContainer.appendChild(square);
     }
 }
