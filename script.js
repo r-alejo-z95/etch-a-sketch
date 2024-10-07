@@ -8,8 +8,6 @@ gridContainer.style.width = `${gridSide}px`;
 gridContainer.style.height = `${gridSide}px`;
 
 function createGrid() {
-    
-    grid = document.querySelector(".grid")
 
     for (let i = 0 ; i < gridSide; i++) {
         let square = document.createElement('div');
@@ -17,7 +15,7 @@ function createGrid() {
         square.className = 'square';
         square.style.width = `${(gridSide / cols) - 2}px`;
         square.style.height = `${(gridSide / rows) - 2}px`;
-        grid.appendChild(square);
+        gridContainer.appendChild(square);
     }
 }
 
