@@ -9,16 +9,20 @@
   </head>
   <body>
     <h1>Etch a Sketch!</h1>
-    <label for="size">Grid Size</label>
-    <input
-      id="size"
-      type="number"
-      value="16"
-      min="16"
-      max="100"
-      class="select-size"
-    />
-    <button class="reset-grid">Reset</button>
+    <div class="btn-bar">
+      <div class="size-input">
+        <label for="size">Grid Size</label>
+        <input
+          id="size"
+          type="number"
+          value="16"
+          min="16"
+          max="100"
+          class="select-size"
+        />
+      </div>
+      <button class="reset-grid">Reset</button>
+    </div>
     <div class="container">
       <div class="grid-container"></div>
     </div>

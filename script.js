@@ -4,8 +4,8 @@ let cols = rows;
 let gridSize = rows * cols;
 
 const gridContainer = document.querySelector(".grid-container");
-gridContainer.style.width = `${gridSide}vw`;
 gridContainer.style.height = `${gridSide}vh`;
+gridContainer.style.width = gridContainer.style.height;
 
 function createGrid() {
   gridContainer.textContent = "";
@@ -18,8 +18,8 @@ function createGrid() {
       square.style.backgroundColor = "black";
     });
 
-    square.style.width = `${gridSide / cols}vw`;
     square.style.height = `${gridSide / rows}vh`;
+    square.style.width = square.style.height;
     gridContainer.appendChild(square);
   }
 }
