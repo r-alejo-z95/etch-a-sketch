@@ -26,6 +26,11 @@ function createGrid() {
 
 let sizeInput = document.querySelector(".select-size");
 sizeInput.addEventListener("input", () => {
+  if (sizeInput.value < 16) {
+    sizeInput.value = 16;
+  } else if (sizeInput.value > 100) {
+    sizeInput.value = 100;
+  }
   rows = sizeInput.value;
   cols = rows;
   gridSize = rows * cols;
