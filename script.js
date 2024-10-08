@@ -1,11 +1,11 @@
-const gridSide = 500;
+const gridSide = 70;
 let rows = 16;
 let cols = rows;
 let gridSize = rows * cols;
 
 const gridContainer = document.querySelector(".grid-container");
-gridContainer.style.width = `${gridSide}px`;
-gridContainer.style.height = `${gridSide}px`;
+gridContainer.style.width = `${gridSide}vw`;
+gridContainer.style.height = `${gridSide}vh`;
 
 function createGrid() {
   gridContainer.textContent = "";
@@ -18,8 +18,8 @@ function createGrid() {
       square.style.backgroundColor = "black";
     });
 
-    square.style.width = `${gridSide / cols}px`;
-    square.style.height = `${gridSide / rows}px`;
+    square.style.width = `${gridSide / cols}vw`;
+    square.style.height = `${gridSide / rows}vh`;
     gridContainer.appendChild(square);
   }
 }
