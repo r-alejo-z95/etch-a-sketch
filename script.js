@@ -37,4 +37,12 @@ sizeInput.addEventListener("change", () => {
   createGrid();
 });
 
+let resetBtn = document.querySelector(".reset-grid");
+resetBtn.addEventListener("click", () => {
+  let squares = document.querySelectorAll(".square");
+  squares.forEach((square) => {
+    square.style.backgroundColor = "";
+  });
+});
+
 createGrid();
