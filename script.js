@@ -14,6 +14,10 @@ function createGrid() {
     let square = document.createElement("div");
 
     square.className = "square";
+    square.addEventListener("mouseover", () => {
+      square.style.backgroundColor = "black";
+    });
+
     square.style.width = `${gridSide / cols}px`;
     square.style.height = `${gridSide / rows}px`;
     gridContainer.appendChild(square);
