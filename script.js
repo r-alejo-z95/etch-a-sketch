@@ -21,8 +21,8 @@ function createGrid() {
 }
 
 let sizeInput = document.querySelector(".select-size");
-sizeInput.addEventListener("input", function () {
-  rows = parseInt(sizeInput.value);
+sizeInput.addEventListener("input", () => {
+  rows = sizeInput.value;
   cols = rows;
   gridSize = rows * cols;
   createGrid();
