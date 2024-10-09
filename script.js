@@ -2,6 +2,7 @@ const gridSide = 70;
 let rows = 16;
 let cols = rows;
 let gridSize = rows * cols;
+let squares;
 
 const gridContainer = document.querySelector(".grid-container");
 gridContainer.style.height = `${gridSide}vh`;
@@ -22,6 +23,7 @@ function createGrid() {
     square.style.width = square.style.height;
     gridContainer.appendChild(square);
   }
+  squares = document.querySelectorAll(".square");
 }
 
 const sizeInput = document.querySelector(".select-size");
@@ -51,7 +53,6 @@ rainbowBtn.addEventListener("click", () => {
 
 const resetBtn = document.querySelector(".reset-grid");
 resetBtn.addEventListener("click", () => {
-  let squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
     square.style.backgroundColor = "";
   });
