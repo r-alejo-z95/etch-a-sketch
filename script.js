@@ -24,6 +24,11 @@ function createGrid() {
     gridContainer.appendChild(square);
   }
   squares = document.querySelectorAll(".square");
+  squares.forEach((square) => {
+    square.addEventListener("mouseover", () => {
+      square.style.backgroundColor = currentColor;
+    });
+  });
 }
 
 const sizeInput = document.querySelector(".select-size");
@@ -39,44 +44,35 @@ sizeInput.addEventListener("change", () => {
   createGrid();
 });
 
-const colorsArray = [
-  "rgba(255, 0, 0, 1) 0%",
-  "rgba(255, 154, 0, 1) 10%",
-  "rgba(208, 222, 33, 1) 20%",
-  "rgba(79, 220, 74, 1) 30%",
-  "rgba(63, 218, 216, 1) 40%",
-  "rgba(47, 201, 226, 1) 50%",
-  "rgba(28, 127, 238, 1) 60%",
-  "rgba(95, 21, 242, 1) 70%",
-  "rgba(186, 12, 248, 1) 80%",
-  "rgba(251, 7, 217, 1) 90%",
-  "rgba(255, 0, 0, 1) 100%",
-];
-
-function getRandomColor(arr) {
-  let randomIndex = Math.floor(Math.random() * arr.length);
-  return (randomColor = arr[randomIndex]);
+function getRandomColor() {
+  const colorsArray = [
+    "rgba(255, 0, 0, 1) 0%",
+    "rgba(255, 154, 0, 1) 10%",
+    "rgba(208, 222, 33, 1) 20%",
+    "rgba(79, 220, 74, 1) 30%",
+    "rgba(63, 218, 216, 1) 40%",
+    "rgba(47, 201, 226, 1) 50%",
+    "rgba(28, 127, 238, 1) 60%",
+    "rgba(95, 21, 242, 1) 70%",
+    "rgba(186, 12, 248, 1) 80%",
+    "rgba(251, 7, 217, 1) 90%",
+    "rgba(255, 0, 0, 1) 100%",
+  ];
+  let randomIndex = Math.floor(Math.random() * colorsArray.length);
+  return colorsArray[randomIndex];
 }
 
 let isGradient = false;
+let currentColor = "black";
 
 const rainbowBtn = document.querySelector(".rainbow");
 rainbowBtn.addEventListener("click", () => {
-  squares.forEach((square) => {
-    if (!isGradient) {
-      square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = getRandomColor(colorsArray);
-      });
-    } else {
-      square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = "black";
-      });
-    }
-  });
   if (!isGradient) {
+    currentColor = getRandomColor();
     rainbowBtn.style.background =
       "linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 10%, rgba(208, 222, 33, 1) 20%, rgba(79, 220, 74, 1) 30%, rgba(63, 218, 216, 1) 40%, rgba(47, 201, 226, 1) 50%, rgba(28, 127, 238, 1) 60%, rgba(95, 21, 242, 1) 70%, rgba(186, 12, 248, 1) 80%, rgba(251, 7, 217, 1) 90%, rgba(255, 0, 0, 1) 100%)";
   } else {
+    currentColor = "black";
     rainbowBtn.style.background = "";
   }
   isGradient = !isGradient;
