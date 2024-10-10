@@ -80,6 +80,29 @@ rainbowBtn.addEventListener("click", () => {
   isGradient = !isGradient;
 });
 
+let isShaded = false;
+
+const shadeBtn = document.querySelector(".shade");
+shadeBtn.addEventListener("click", () => {
+  if (!isShaded) {
+    squares.forEach((square) => {
+      square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = getRandomColor();
+      });
+    });
+    shadeBtn.style.background =
+      "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0.9) 90%, rgba(0, 0, 0, 1) 100%)";
+  } else {
+    squares.forEach((square) => {
+      square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = "black";
+      });
+    });
+    shadeBtn.style.background = "";
+  }
+  isShaded = !isShaded;
+});
+
 const resetBtn = document.querySelector(".reset-grid");
 resetBtn.addEventListener("click", () => {
   squares.forEach((square) => {
