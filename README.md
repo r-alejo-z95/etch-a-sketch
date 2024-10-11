@@ -12,7 +12,6 @@ In this project, I built a digital sketchpad, similar to an Etch-A-Sketch, using
 - **Hover effect** that changes the color of the squares as the user moves the mouse over them.
 - **Responsive grid size**: A button allows the user to set the number of squares per side, with a maximum of 100.
 - **Random color mode**: Each interaction with the squares can generate random RGB values.
-- **Darkening effect**: Progressive darkening of squares by 10% on each hover until fully black.
 
 ## Technologies Used
 
@@ -31,5 +30,5 @@ In this project, I built a digital sketchpad, similar to an Etch-A-Sketch, using
 
 1. Open the app and hover over the grid to start drawing.
 2. Optionally, change the grid size.
-3. Optionally, activate the extra features for random colors and progressive darkening.
+3. Optionally, activate the rainbow feature for random colors.
 4. Have fun!
